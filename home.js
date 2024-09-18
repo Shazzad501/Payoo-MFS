@@ -41,16 +41,18 @@ document.getElementById('cash-out').addEventListener('click',function(event){
   
 })
 
-// add money button js
-
-document.getElementById('money-add').addEventListener('click', function(){
-  document.getElementById('add-money-form').style.display = 'block';
-})
 
 // cash out button js
 
 document.getElementById('money-out').addEventListener('click', function(){
-  document.getElementById('cash-out-form').style.display = 'block';
+  document.getElementById('cash-out-form').classList.remove('hidden');
+  document.getElementById('add-money-form').classList.add('hidden');
+});
 
-})
+// add money button
+
+document.getElementById('money-add').addEventListener('click', function(){
+  document.getElementById('cash-out-form').classList.add('hidden')
+  document.getElementById('add-money-form').classList.remove('hidden');
+});
 
