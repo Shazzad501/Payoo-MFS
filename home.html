@@ -45,15 +45,15 @@
 
             <!-- user actionable button -->
             <div>
-              <button class="btn btn-lg">Add Money</button>
-              <button class="btn btn-lg">Cash Out</button>
+              <button id="money-add" class="btn btn-lg">Add Money</button>
+              <button id="money-out" class="btn btn-lg">Cash Out</button>
             </div>
 
             <!-- section divider -->
             <div class="divider"></div>
 
             <!-- add money form start -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -91,6 +91,46 @@
               </form>
             </div>
             <!-- add money form end -->
+
+            <!-- Cash out start -->
+            <div id="cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash Out Amount</span>
+                  </label>
+                  <input
+                    id="cash-out-amount"
+                    type="text"
+                    placeholder="Cash Out Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Your PIN</span>
+                  </label>
+                  <input
+                    id="cash-out-pin"
+                    type="password"
+                    placeholder="Pin"
+                    class="input input-bordered"
+                    autocomplete="off"
+                    required
+                  />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover"
+                      >Forgot PIN?</a
+                    >
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cash-out" class="btn btn-primary">Cash Out</button>
+                </div>
+              </form>
+            </div>
+            <!-- Cash out end -->
           </div>
         </div>
       </div>
